@@ -7,13 +7,15 @@ export default function NotesList({ kelas, judul, item }) {
     <section className={kelas}>
       <h2>{judul}</h2>
       <SearchBar />
-      <section className="notes-list">
-        {item.length > 0 ? (
-          item.map((note) => <Notes key={note.id} {...note} />)
-        ) : (
-          <NotesListEmpty />
-        )}
-      </section>
+      {item.length > 0 ? (
+        <section className="notes-list">
+          {item.map((note) => (
+            <Notes key={note.id} {...note} />
+          ))}
+        </section>
+      ) : (
+        <NotesListEmpty />
+      )}
     </section>
   );
 }

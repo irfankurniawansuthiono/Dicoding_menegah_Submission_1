@@ -3,10 +3,12 @@ import NotesList from "../NotesList/NotesList";
 export default function Archives() {
   const archivedNotes = getArchivedNotes();
   return (
-    <NotesList
-      kelas={"archives-page"}
-      judul={"Catatan Arsip"}
-      item={archivedNotes}
-    />
+    <section className="archives-page">
+      <NotesList
+        kelas={"archives-page"}
+        judul={"Catatan Arsip"}
+        item={archivedNotes}
+      />
+    </section>
   );
 }
